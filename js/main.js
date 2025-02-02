@@ -99,3 +99,85 @@ $(document).ready(function(){
         });
     });
 });
+
+$(document).ready(function(){
+	// App carousel
+	$('.app-carousel').owlCarousel({
+		items: 5,               // Number of items to show on large devices
+		loop: true,
+		margin: 20,
+		autoplay: true,
+		autoplayTimeout: 3000,  // Autoplay time in milliseconds
+		responsive: {
+			0: {
+				items: 1       // Number of items to show on small devices
+			},
+			768: {
+				items: 2       // Number of items to show on medium devices
+			},
+			1024: {
+				items: 3       // Number of items to show on large devices
+			}
+		},
+		dots: true,
+        dotsEach: false,    // Disable dots for each item
+        dotsData: false,    // Disable data dots
+        touchDrag: true,
+        mouseDrag: true,
+        // Ensure only 3 dots are shown
+        onInitialized: function() {
+            if(this.$element.find('.owl-dot').length > 3) {
+                this.$element.find('.owl-dot').slice(3).hide();
+            }
+		         }         // Enable dots for each item
+	});
+
+	// Testimonials carousel (same configuration)
+	$('.testimonial-carousel').owlCarousel({
+		items: 5,               // Number of items to show on large devices
+		loop: true,
+		margin: 20,
+		autoplay: true,
+		autoplayTimeout: 3000,  // Autoplay time in milliseconds
+		responsive: {
+			0: {
+				items: 1       // Number of items to show on small devices
+			},
+			768: {
+				items: 2       // Number of items to show on medium devices
+			},
+			1024: {
+				items: 3       // Number of items to show on large devices
+			}
+		},
+		dots: true,
+		dotsEach: true         // Enable dots for each item
+	});
+
+	// Handle tech item clicks
+	$('.tech-item').click(function(e) {
+		e.preventDefault();
+		$('.tech-item').removeClass('active');
+		$(this).addClass('active');
+	});
+});
+
+
+// For The Clients Logo Area
+const waveContent = document.getElementById("waveContent");
+
+const clone = waveContent.cloneNode(true);
+waveContent.parentNode.appendChild(clone);
+// For The Clients Logo Area
+
+// waveContentLeft-scrolling effect
+const waveContentLeft = document.getElementById("waveContentLeft");
+
+const cloneLeft = waveContentLeft.cloneNode(true);
+waveContentLeft.parentNode.appendChild(cloneLeft);
+
+// waveContentLeft-scrolling effect
+const waveContentRight = document.getElementById("waveContentRight");
+
+const cloneRight = waveContentRight.cloneNode(true);
+waveContentRight.parentNode.appendChild(cloneRight);

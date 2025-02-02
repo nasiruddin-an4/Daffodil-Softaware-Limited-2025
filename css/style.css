@@ -690,3 +690,361 @@ p {
 .service-fotter-right img{
   width: 80%;
 }
+
+/*============================================
+    Technologies Area
+*=============================================*/
+.tech-items{
+  background-color:   #f5f8ff   !important;
+}
+.tech-item {
+  font-size: 14px;
+  border: none;
+}
+
+.tech-item a {
+  color: #000;
+  font-weight: 500;
+}
+
+.tech-item.active {
+  background-color: #c1bbff !important;
+  /* Highlight color for active item */
+  border-radius: 4px;
+  padding: 0px 5px;
+}
+
+.tech-item:hover {
+  color: #7267f0;
+}
+
+.nav-icon {
+  font-size: 18px;
+  margin-right: 5px;
+}
+
+.app-img{
+  width: 60px;
+}
+
+/*============================================
+  Technologies End
+*=============================================*/
+
+.tech-item {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 16px;
+  border-radius: 50px;
+  color: #6c757d;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  margin: 5px;
+}
+
+.tech-item:hover {
+  background-color: #f8f9fa;
+  color: #0d6efd;
+}
+
+.tech-item.active {
+  background-color: #e7f1ff;
+  color: #0d6efd;
+}
+
+.tech-item i {
+  margin-right: 8px;
+  font-size: 1.2rem;
+}
+
+
+.app-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid #eee;
+}
+
+.app-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.app-img img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+}
+
+/* Custom styles for owl dots */
+.owl-dots {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
+.owl-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #D1D1D1 !important;
+  transition: all 0.3s ease;
+}
+
+.owl-dot.active {
+  background: #0d6efd !important;
+  width: 24px;
+  border-radius: 5px;
+}
+
+/* Hide additional dots if they appear */
+.owl-dot:nth-child(n+4) {
+  display: none !important;
+}
+
+
+
+/*============================================
+    Clients Slide start
+*=============================================*/
+.logos-slider {
+  overflow: hidden;
+  padding: 30px 0px;
+  white-space: nowrap;
+  position: relative;
+}
+
+.logos-slider:before, .logos-slider:after {
+  position: absolute;
+  top: 0;
+  content: '';
+  width: 250px;
+  height: 100%;
+  z-index: 2;
+}
+
+.logos-slider:before {
+  left: 0;
+  background: linear-gradient(to left, rgba(255,255,255,0), rgb(255, 255, 255));
+}
+
+.logos-slider:after {
+  right: 0;
+  background: linear-gradient(to right, rgba(255,255,255,0), rgb(255, 255, 255));
+}
+.logos-slider {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow: hidden;
+    position: relative;
+}
+
+.logos-slider-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: slide 30s linear infinite;
+}
+
+.logos-slider-container img {
+  width:100px;
+     max-width: 100px;
+}
+.logos-slider-container a{
+    margin-left: 100px;
+}
+
+@keyframes slide {
+  0% {
+    transform: translate3d(0,0,0)
+  }
+  100% {
+    transform: translate3d(-100%,0,0)
+  }
+}
+
+/*============================================
+  Clients Slide END
+*=============================================*/
+
+/*============================================
+    Industry wave
+*=============================================*/
+.industry {
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+}
+
+.industry-wave {
+  overflow: hidden;
+  position: relative;
+}
+
+.wave-slider {
+  display: flex;
+}
+
+.wave-slider-left {
+  display: flex;
+  white-space: nowrap;
+  animation: scroll 30s linear infinite;
+}
+
+.wave-slider-right {
+  display: flex;
+  white-space: nowrap;
+  animation: scrollRight 30s linear infinite;
+}
+
+.wave-slider-left a {
+  display: inline-flex;
+  margin-right: 50px; /* Adjust spacing as needed */
+}
+
+.wave-slider-right a {
+  display: inline-flex;
+  margin-right: 50px; /* Adjust spacing as needed */
+}
+
+.wave-slider-left a img{
+  height: 25px;
+  margin-right: 10px;
+}
+
+.wave-slider-right a img{
+  height: 25px;
+  margin-right: 10px;
+}
+
+@keyframes scroll {
+  0% {
+      transform: translateX(0);
+  }
+  100% {
+      transform: translateX(-100%);
+  }
+}
+
+@keyframes scrollRight {
+  0% {
+      transform: translateX(-100%);
+  }
+  100% {
+      transform: translateX(0);
+  }
+}
+
+/*============================================
+  Industry wave End
+*=============================================*/
+
+/*============================================
+Testimonilas Area
+*=============================================*/
+.testimonial-info img {
+  width: 80px !important;
+  height: 80px;
+  object-fit: cover;
+  border: 3px solid #030c75;
+}
+
+/*** Testimonial ***/
+.owl-carousel .owl-dots {
+  text-align: center;     /* Center the dots */
+  padding-top: 15px;      /* Add spacing above the dots */
+}
+
+.owl-carousel .owl-dot {
+  margin: 0 5px;          /* Adjust spacing between dots */
+}
+
+.owl-carousel .owl-dot.active span {
+  opacity: 1;             /* Highlight active dot */
+  background-color: #007bff; /* Active dot color */
+}
+
+.testimonial-carousel .owl-dot {
+  margin-top: 30px;
+  display: inline-block;
+  margin-right: 10px;
+  width: 40px;
+  height: 4px;
+  background: #838383;
+  transition: .5s;
+}
+
+.testimonial-carousel .owl-dot.active {
+  background: var(--primary);
+}
+.owl-dots .owl-dot:nth-child(n+4) {
+  display: none;
+}
+/* Style for the active center item */
+.owl-item.center .testimonial-item {
+  background-color: blue;
+  color: white; /* Adjust text color for contrast */
+  transition: background-color 0.3s ease;
+}
+/*============================================
+  END Testimonial Area
+*=============================================*/
+
+/* Certification Styles */
+.certification-section {
+  padding: 60px 0;
+  background-color: #fff;
+}
+
+.certification-badge {
+  max-width: 150px;
+  transition: transform 0.3s ease;
+}
+
+.certification-badge:hover {
+  transform: translateY(-5px);
+}
+
+/* Footer Styles */
+.footer {
+  background-color: #080B1A;
+  color: #fff;
+  padding: 60px 0 20px;
+}
+
+.footer a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer a:hover {
+  color: #0d6efd;
+}
+
+.footer-logo {
+  max-width: 150px;
+  margin-bottom: 20px;
+}
+
+.social-links a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+  margin-right: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.social-links a:hover {
+  background-color: #0d6efd;
+  color: #fff;
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 20px;
+  margin-top: 40px;
+}
