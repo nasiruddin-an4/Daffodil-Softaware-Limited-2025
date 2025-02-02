@@ -127,7 +127,9 @@ b,
 strong {
   font-weight: bolder;
 }
-
+.fw-medium {
+  font-weight: 600 !important;
+}
 small {
   font-size: 80%;
 }
@@ -393,24 +395,6 @@ h6, .h6 {
 }
 
 .display-1 {
-  font-size: 6rem;
-  font-weight: 300;
-  line-height: 1.2;
-}
-
-.display-2 {
-  font-size: 5.5rem;
-  font-weight: 300;
-  line-height: 1.2;
-}
-
-.display-3 {
-  font-size: 4.5rem;
-  font-weight: 300;
-  line-height: 1.2;
-}
-
-.display-1 {
   font-size: 5rem;
   font-weight: 300;
   line-height: 1.2;
@@ -444,7 +428,7 @@ h6, .h6 {
 /* Responsive adjustments */
 @media (max-width: 1199.98px) { /* Large Devices (Laptop) */
   .display-1 { font-size: 4rem; }
-  .display-2 { font-size: 3.5rem; }
+  .display-2 { font-size: 2.5rem; }
   .display-3 { font-size: 3rem; }
   .display-4 { font-size: 2.5rem; }
   .display-5 { font-size: 2rem; }
@@ -453,7 +437,7 @@ h6, .h6 {
 
 @media (max-width: 991.98px) { /* Medium Devices (Tablet) */
   .display-1 { font-size: 3.5rem; }
-  .display-2 { font-size: 3rem; }
+  .display-2 { font-size: 2rem; }
   .display-3 { font-size: 2.5rem; }
   .display-4 { font-size: 2rem; }
   .display-5 { font-size: 1.75rem; }
@@ -462,7 +446,7 @@ h6, .h6 {
 
 @media (max-width: 767.98px) { /* Small Devices (Mobile) */
   .display-1 { font-size: 3rem; }
-  .display-2 { font-size: 2.5rem; }
+  .display-2 { font-size: 1.5rem; }
   .display-3 { font-size: 2rem; }
   .display-4 { font-size: 1.75rem; }
   .display-5 { font-size: 1.5rem; }
@@ -564,6 +548,7 @@ a > code {
   color: inherit;
 }
 
+
 kbd {
   padding: 0.2rem 0.4rem;
   font-size: 87.5%;
@@ -629,10 +614,66 @@ pre code {
 
 .container-fluid {
   width: 100%;
-  padding-right: 15px;
-  padding-left: 15px;
+  padding-right: 8rem;
+  padding-left: 8rem;
   margin-right: auto;
   margin-left: auto;
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (max-width: 991px) {
+  .container-fluid {
+    padding-right: 4rem;
+    padding-left: 4rem;
+  }
+}
+
+/* Small devices (phones, 576px and up) */
+@media (max-width: 767px) {
+  .container-fluid {
+    padding-right: 2rem;
+    padding-left: 2rem;
+  }
+}
+
+/* Extra small devices (phones under 576px) */
+@media (max-width: 480px) {
+  .container-fluid {
+    padding-right: 1rem;
+    padding-left: 1rem;
+  }
+}
+
+p {
+  font-size: 14px; /* Default for small screens */
+}
+
+/* Medium screens (≥576px) */
+@media (min-width: 576px) {
+  p {
+    font-size: 15px;
+  }
+}
+
+/* Large screens (≥768px) */
+@media (min-width: 768px) {
+  p {
+    font-size: 16px;
+  }
+}
+
+/* Extra Large screens (≥992px) */
+@media (min-width: 992px) {
+  p {
+    font-size: 17px;
+  }
+}
+
+/* XXL screens (≥1200px) */
+@media (min-width: 1200px) {
+  p {
+    font-size: 18px;
+  }
 }
 
 .row {
@@ -7086,6 +7127,13 @@ button.bg-light:focus {
   background-color: #343a40 !important;
 }
 
+.bg-darkBlue{
+  background-image: linear-gradient(#150B5E, #0b0538) !important;
+}
+
+.text-darkBlue{
+  color: #150B5E !important;
+}
 a.bg-dark:hover, a.bg-dark:focus,
 button.bg-dark:hover,
 button.bg-dark:focus {
@@ -7217,7 +7265,27 @@ button.bg-dark:focus {
 }
 
 .rounded-0 {
-  border-radius: 0 !important;
+  border-radius: 0;
+}
+
+.rounded-1 {
+  border-radius: 0.125rem;
+}
+
+.rounded-2 {
+  border-radius: 0.25rem;
+}
+
+.rounded-3 {
+  border-radius: 0.5rem;
+}
+
+.rounded-4 {
+  border-radius: 1rem;
+}
+
+.rounded-5 {
+  border-radius: 2rem;
 }
 
 .clearfix::after {
@@ -8583,6 +8651,7 @@ button.bg-dark:focus {
 
 .m-5 { margin: 3rem !important; }
 .mt-5, .my-5 { margin-top: 3rem !important; }
+.mt-10, .my-10 { margin-top: 8rem !important; }
 .mr-5, .mx-5 { margin-right: 3rem !important; }
 .mb-5, .my-5 { margin-bottom: 3rem !important; }
 .ml-5, .mx-5 { margin-left: 3rem !important; }
@@ -8675,6 +8744,7 @@ button.bg-dark:focus {
 .pt-5, .py-5 { padding-top: 3rem !important; }
 .pr-5, .px-5 { padding-right: 3rem !important; }
 .pb-5, .py-5 { padding-bottom: 3rem !important; }
+.pb-10, .py-10 { padding-bottom: 10rem !important; }
 .pl-5, .px-5 { padding-left: 3rem !important; }
 
 /* 🔥 Responsive Padding for Different Devices 🔥 */
