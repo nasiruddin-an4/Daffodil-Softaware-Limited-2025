@@ -6,11 +6,13 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link rel="shortcut icon" href="images/logo-dsl.png" type="image/x-icon">
+  <title>Daffodil Software Limited || 2025</title>
 
   <link rel="stylesheet" href="fonts/icomoon/style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.min.css" />
 
   <link rel="stylesheet" href="css/owl.carousel.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
 
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="css/bootstrap.min.css">
@@ -21,8 +23,6 @@
   <link rel="stylesheet" href="/Animated/animate/animate.min.css">
   <!-- Style -->
   <link rel="stylesheet" href="css/style.css">
-
-  <title>Daffodil Software Limited || 2025</title>
 </head>
 
 <body>
@@ -37,10 +37,10 @@
     </div>
     <div class="site-mobile-menu-body"></div>
   </div>
-  <!-- .site-mobile-menu -->
+  <!-- site-mobile-menu -->
 
   <div class="site-navbar-wrap">
-    <div class="site-navbar-top">
+    <div class="site-navbar-top d-none d-md-block">
       <div class="container-fluid py-3">
         <div class="row align-items-center">
           <div class="col-6">
@@ -75,7 +75,7 @@
             <nav class="site-navigation" role="navigation">
               <ul class="site-menu main-menu js-clone-nav d-none d-lg-flex justify-content-center">
                 <li class="active"><a href="#home-section" class="nav-link">Home</a></li>
-                <li><a href="#classes-section" class="nav-link">Services</a></li>
+                <li><a href="#" class="nav-link">Services</a></li>
                 <li class="has-children">
                   <a href="#" class="nav-link">Product</a>
                   <ul class="dropdown arrow-top">
@@ -96,8 +96,19 @@
                 <li><a href="#about-section" class="nav-link">Portfolio</a></li>
                 <li><a href="#events-section" class="nav-link">Company</a></li>
                 <li><a href="#gallery-section" class="nav-link">Insight</a></li>
-                <li><a href="#"><i class="ri-search-2-line"></i></a></li>
+                <li><a href="#" class="nav-link search-icon" id="searchToggle"><i class="ri-search-2-line"></i></a></li>
               </ul>
+
+              <!-- Search Box  -->
+              <div class="search-box" id="searchBox">
+                <form onsubmit="handleSearch(event)">
+                    <input type="text" id="searchInput" placeholder="Search..." autocomplete="off">
+                    <button type="submit" class="search-btn">
+                        <i class="ri-search-2-line"></i>
+                    </button>
+                </form>
+            </div>
+
             </nav>
           </div>
           <div class="col-lg-2 col-md-6 col-6 text-right BTN">
@@ -120,7 +131,7 @@
   <div class="hero" style="background-image: url('images/hero-img.png');">
     <div class="container-fluid">
       <div class="col-12 animated slideInRight heroContent">
-        <p class="fs-6 fs-md-5 fs-lg-4 fs-xl-3">Engross with a trusted Software Development Partner</p>
+        <p class="fs-6 fs-md-5 fs-lg-4 fs-xl-3 mb-2">Engross with a trusted Software Development Partner</p>
         <h2 class="display-2 font-weight-bolder mb-5">INNOVATION BEYOND DIGITAL TRANSFORMATION</h2>
         <a href="#" class="btn-gradient">Lets discuss Your Project</a>
       </div>
@@ -163,7 +174,8 @@
 
         <!-- Start Counter -->
         <div class="container">
-          <div class="row mt-5 ">
+          <div class="row mt-10 pb-5">
+            <!-- Years of Operation -->
             <div class="col-lg-3 col-md-6 col-sm-6 mb-4">
               <div class="counter bg-darkBlue p-3 border border-white rounded-3">
                 <div class="d-flex align-items-center pb-10">
@@ -173,28 +185,34 @@
                 <p class="text-white">Years of Operation</p>
               </div>
             </div>
+
+            <!-- Project Completed -->
             <div class="col-lg-3 col-md-6 col-sm-6 mb-4">
               <div class="counter bg-white p-3 border border-white rounded-3">
                 <div class="d-flex align-items-center pb-10">
-                  <h2 class="counter-value text-darkBlue">20</h2>
+                  <h2 class="counter-value text-darkBlue">300</h2>
                   <span class="display-6 text-darkBlue">+</span>
                 </div>
                 <p class="text-darkBlue">Project Completed</p>
               </div>
             </div>
+
+            <!-- Profesionals -->
             <div class="col-lg-3 col-md-6 col-sm-6 mb-4">
               <div class="counter bg-darkBlue p-3 border border-white rounded-3">
                 <div class="d-flex align-items-center pb-10">
-                  <h2 class="counter-value">20</h2>
+                  <h2 class="counter-value">70</h2>
                   <span class="display-6 text-white">+</span>
                 </div>
                 <p class="text-white">Profesionals</p>
               </div>
             </div>
+
+            <!-- Happy Clients -->
             <div class="col-lg-3 col-md-6 col-sm-6 mb-4">
               <div class="counter bg-white p-3 border border-white rounded-3">
                 <div class="d-flex align-items-center pb-10">
-                  <h2 class="counter-value text-darkBlue">20</h2>
+                  <h2 class="counter-value text-darkBlue">200</h2>
                   <span class="display-6 text-darkBlue">+</span>
                 </div>
                 <p class="text-darkBlue">Happy Clients</p>
@@ -225,7 +243,7 @@
       </div>
 
       <!-- Products Grid -->
-      <div class="row gy-5">
+      <div class="row gy-5 mt-10">
         <!-- Smart Edu -->
         <div class="col-lg-4 col-md-6">
           <div class="p-3 p-sm-0 product-card">
@@ -308,6 +326,7 @@
   </section>
   <!-- Our Products End -->
 
+
   <!-- Our Services -->
   <section class="bg-darkBlue">
     <div class="container-fluid py-5">
@@ -321,9 +340,9 @@
           consetetur sadipscing elitr.
         </p>
       </div>
-  
+
       <!-- Products Grid -->
-      <div class="row text-white pt-4">
+      <div class="row text-white mt-10">
         <div class="col-lg-4 col-md-6">
           <div class="servieItem">
             <img src="images/software.png" alt="" class="mb-4 rounded-pill bg-white p-2">
@@ -342,7 +361,7 @@
             </p>
           </div>
         </div>
-  
+
         <div class="col-lg-4 col-md-6">
           <div class="servieItem">
             <img src="images/software-5.png" alt="" class="mb-4 rounded-pill bg-white p-2">
@@ -352,7 +371,7 @@
             </p>
           </div>
         </div>
-  
+
         <div class="col-lg-4 col-md-6">
           <div class="servieItem">
             <img src="images/software-4.png" alt="" class="mb-4 rounded-pill bg-white p-2">
@@ -362,7 +381,7 @@
             </p>
           </div>
         </div>
-  
+
         <div class="col-lg-4 col-md-6">
           <div class="servieItem">
             <img src="images/software-3.png" alt="" class="mb-4 rounded-pill bg-white p-2">
@@ -372,7 +391,7 @@
             </p>
           </div>
         </div>
-  
+
         <div class="col-lg-4 col-md-6">
           <div class="servieItem">
             <img src="images/software-2.png" alt="" class="mb-4 rounded-pill bg-white p-2">
@@ -383,436 +402,470 @@
 
           </div>
         </div>
-  
+
       </div>
     </div>
 
     <div class="container-fluid premium-software py-5">
-          <!-- Service Footer -->
-          <div class="row d-flex justify-content-between">
-              <div class="col-lg-5 col-lg-5 d-flex align-items-start">
-                  <div class="service-fotter-left">
-                      <h2 class="display-5 text-white mb-5 fw-medium">Want To Develop A Premium Custom Software?</h2>
-                      <a class="btn-gradient" href="#">Contact Us</a>
-                  </div>
-              </div>
-              <div class="col-lg-7 d-flex align-items-end justify-content-end">
-                  <div class="service-fotter-right">
-                      <img src="images/pngwing.com.png" alt="">
-                  </div>
-              </div>
-          <!-- Service Footer END-->
+      <!-- Service Footer -->
+      <div class="row d-flex justify-content-between">
+        <div class="col-lg-5 col-lg-5 d-flex align-items-start">
+          <div class="service-fotter-left">
+            <h2 class="display-5 text-white mb-5 fw-medium">Want To Develop A Premium Custom Software?</h2>
+            <a class="btn-gradient" href="#">Contact Us</a>
+          </div>
+        </div>
+        <div class="col-lg-7 d-flex align-items-end justify-content-end">
+          <div class="service-fotter-right">
+            <img src="images/pngwing.com.png" alt="">
+          </div>
+        </div>
+        <!-- Service Footer END-->
       </div>
-  </div>
+    </div>
   </section>
   <!-- Our Services End -->
 
 
   <!-- Pushing Your Business -->
-  <section class="tech-items py-5">
+  <section class="bg-light-blue py-5">
     <div class="container-fluid">
-      <!-- Title Section -->
+      <!-- Header Section -->
       <div class="row justify-content-center mb-5 mt-5">
-        <div class="col-lg-12 text-center section-title">
+        <div class="col-lg-8 text-center section-title">
           <h2 class="font-weight-bold mb-4">Pushing Your Business To Success Through Emerging Technologies</h2>
-          <p class="text-muted">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
-            invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+          <p class="">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
+            labore et dolore magna aliquyam erat.</p>
         </div>
       </div>
-  
+
       <!-- Technology Navigation -->
       <div class="row justify-content-center mb-5">
-        <div class="col-auto d-flex flex-wrap justify-content-center gap-2">
-          <a href="#" class="tech-item active">
+        <div class="col-12 d-flex flex-wrap justify-content-center">
+          <a href="#" class="tech-pill active">
             <i class="ri-smartphone-line"></i> Mobile
           </a>
-          <a href="#" class="tech-item">
+          <a href="#" class="tech-pill">
             <i class="ri-code-line"></i> FrontEnd
           </a>
-          <a href="#" class="tech-item">
+          <a href="#" class="tech-pill">
             <i class="ri-server-line"></i> BackEnd
           </a>
-          <a href="#" class="tech-item">
+          <a href="#" class="tech-pill">
             <i class="ri-database-2-line"></i> Database
           </a>
-          <a href="#" class="tech-item">
+          <a href="#" class="tech-pill">
             <i class="ri-settings-3-line"></i> CMS
           </a>
-          <a href="#" class="tech-item">
+          <a href="#" class="tech-pill">
             <i class="ri-tools-line"></i> Tools
           </a>
-          <a href="#" class="tech-item">
+          <a href="#" class="tech-pill">
             <i class="ri-plug-line"></i> Integrations
           </a>
-          <a href="#" class="tech-item">
+          <a href="#" class="tech-pill">
             <i class="ri-cloud-line"></i> Cloud
           </a>
-          <a href="#" class="tech-item">
+          <a href="#" class="tech-pill">
             <i class="ri-git-branch-line"></i> DevOps
           </a>
         </div>
       </div>
-  
-      <!-- Mobile App Section -->
-      <div class="row align-items-center mt-5">
-        <div class="col-lg-4 mb-4 mb-lg-0">
-          <h3 class="fw-bold mb-3">Mobile App Development</h3>
-          <p class="text-muted mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus minus sit eum
-            nisi fugit possimus quam.</p>
-          <a href="#" class="btn-gradient">Learn More</a>
-        </div>
-        <div class="col-lg-8">
-          <div class="app-carousel owl-carousel testimonial-carousel px-2">
-            <div class="app-card p-4 rounded-4">
-              <div class="app-img">
-                <img src="images/flutter-svgrepo-com.svg" alt="Flutter" class="mb-4">
-              </div>
-              <h4 class="fw-bold mb-3">Flutter</h4>
-              <p class="text-muted mb-0">Lorem ipsum dolor sit amet, consec adipisicing elit. Recusandae sapiente dolorum
-                quae dolores.</p>
-            </div>
-            <div class="app-card p-4 rounded-4">
-              <div class="app-img">
-                <img src="images/kotlin-svgrepo-com.svg" alt="Kotlin" class="mb-4">
-              </div>
-              <h4 class="fw-bold mb-3">Kotlin</h4>
-              <p class="text-muted mb-0">Lorem ipsum dolor sit amet, consec adipisicing elit. Recusandae sapiente dolorum
-                quae dolores.</p>
-            </div>
-            <div class="app-card p-4 rounded-4">
-              <div class="app-img">
-                <img src="images/swift-svgrepo-com.svg" alt="Swift" class="mb-4">
-              </div>
-              <h4 class="fw-bold mb-3">Swift</h4>
-              <p class="text-muted mb-0">Lorem ipsum dolor sit amet, consec adipisicing elit. Recusandae sapiente dolorum
-                quae dolores.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-  
     </div>
   </section>
   <!-- Pushing Your Business -->
 
+  <!-- Mobile App Development -->
+  <section class="bg-light-blue pb-5">
+    <div class="container-fluid">
+      <div class="row align-items-center">
+        <div class="col-12 col-lg-4">
+          <div class="mobileApp section-title">
+            <h2 class="font-weight-bold mb-3">Mobile App Development</h2>
+            <p class="mb-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus minus sit eum nisi
+              fugit possimus quam aperiam blanditiis, aliquam repellendus quod enim soluta, excepturi nesciunt
+              perferendis. Molestias explicabo facilis quo.</p>
 
-   <!-- Trusted by Clients -->
-   <section class="mt-10">
+            <a href="#" class="btn-gradient">Learn More</a>
+          </div>
+        </div>
+        <div class="col-12 col-lg-8">
+          <div class="testimonial-carousel owl-carousel">
+            <!-- Mobile App Development Card Start -->
+            <div class="MobileAppCard bg-white rounded-3 p-4 text-left">
+              <img src="images/swift-svgrepo-com.svg" alt="">
+              <h2 class="mb-3 font-weight-bold">Swift</h2>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates, eos quos aliquam consequatur.</p>
+            </div>
+            <!-- Card end  -->
+
+            <div class="MobileAppCard bg-white rounded-3 p-4 text-left">
+              <img src="images/flutter-svgrepo-com.svg" alt="">
+              <h2 class="mb-3 font-weight-bold">Flutter</h2>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates, eos quos aliquam consequatur.</p>
+            </div>
+            <!-- Card end  -->
+
+            <div class="MobileAppCard bg-white rounded-3 p-4 text-left">
+              <img src="images/swift-svgrepo-com.svg" alt="">
+              <h2 class="mb-3 font-weight-bold">Swift</h2>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates, eos quos aliquam consequatur.</p>
+            </div>
+            <!-- Card end  -->
+
+            <div class="MobileAppCard bg-white rounded-3 p-4 text-left">
+              <img src="images/swift-svgrepo-com.svg" alt="">
+              <h2 class="mb-3 font-weight-bold">Swift</h2>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates, eos quos aliquam consequatur.</p>
+            </div>
+            <!-- Card end  -->
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Mobile App Development END -->
+
+
+  <!-- Trusted by Clients -->
+  <section class="mt-10">
     <div class="container-fluid ">
       <div class="row justify-content-center mb-5 mt-5">
-          <div class="col-lg-12 section-title text-center">
-              <h2 class="font-weight-bold">Trusted by Clients</h2>
-              <p class="pt-4 container">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illum rerum explicabo quia ipsa adipisci. Atque nam repudiandae nemo, dolor suscipit voluptatem ut deserunt? Cupiditate cum consectetur vitae quis, nam delectus.</p>
-          </div>
-           <!--Family Logo-->
-           <div class="col-md-12">
-              <div class="client-logo">
-                  <div class="logos-slider">
-                      <div class="logos-slider-container" id="waveContent">
-                          <a href="#"><img src="images/cdc.png"/></a>
-                          <a href="#"><img src="images/embassy-usa.png"/></a>
-                          <a href="#"><img src="images/cdc.png"/></a>
-                          <a href="#"><img src="images/ict.png"/></a>
-                          <a href="#"><img src="images/who.png"/></a>
-                          <a href="#"><img src="images/cdc.png"/></a>
-                          <a href="#"><img src="images/ict.png"/></a>
-                          <a href="#"><img src="images/who.png"/></a>
-                      </div>
-                  </div>
+        <div class="col-lg-12 section-title text-center">
+          <h2 class="font-weight-bold">Trusted by Clients</h2>
+          <p class="pt-4 container">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illum rerum explicabo quia
+            ipsa adipisci. Atque nam repudiandae nemo, dolor suscipit voluptatem ut deserunt? Cupiditate cum consectetur
+            vitae quis, nam delectus.</p>
+        </div>
+        <!--Family Logo-->
+        <div class="col-md-12 mt-5">
+          <div class="client-logo">
+            <div class="logos-slider">
+              <div class="logos-slider-container" id="waveContent">
+                <a href="#"><img src="images/cdc.png" /></a>
+                <a href="#"><img src="images/embassy-usa.png" /></a>
+                <a href="#"><img src="images/cdc.png" /></a>
+                <a href="#"><img src="images/ict.png" /></a>
+                <a href="#"><img src="images/who.png" /></a>
+                <a href="#"><img src="images/cdc.png" /></a>
+                <a href="#"><img src="images/ict.png" /></a>
+                <a href="#"><img src="images/who.png" /></a>
               </div>
+            </div>
           </div>
-      <!--Family Logo END-->
+        </div>
+        <!--Family Logo END-->
       </div>
-</div>
-   </section>
-<!-- Trusted by Clients End-->
-
-
-<!-- Testimonilas Area -->
-<section class="mt-10">
-  <div class="container-fluid">
-    <div class="row">
-        <div class="section-title text-center pb-5">
-            <h2>Client Experience</h2>
-            <p class="pt-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores amet corrupti tenetur ullam voluptatem, asperiores corporis dolor neque adipisci consectetur qui vero libero eveniet earum id? Quisquam adipisci minus et.</p>
-        </div>
     </div>
-
-    <div class="testimonial-carousel owl-carousel card-deck wow fadeIn" data-wow-delay="0.5s">
-        <!-- Testimonials Card Start -->
-        <div class="card p-4 rounded-1">
-            <div class="testimonial-info d-flex justify-content-between pb-3">
-                <div class="testimonials-title">
-                    <h4><a class="text-dark" href="#">Patrick Garner Dony</a></h4>
-                    <span>Economist</span>
-                    <p>Daffodil Software Ltd.</p>
-                </div>
-                <div class="testimonials-img">
-                    <img class="rounded-circle" src="img/team-4.jpg" alt="">
-                </div>
-            </div>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates, eos quos aliquam consequatur hic laborum, mollitia culpa ut repellendus iste optio. Accusamus, corrupti ex voluptate cumque laudantium doloremque in beatae.  Voluptates, eos quos aliquam consequatur hic laborum, mollitia culpa ut repellendus iste optio. Accusamus, corrupti ex voluptate cumque laudantium doloremque in beatae?</p>
-        </div>
-        <!-- card end -->
-
-        <!-- Testimonials Card Start -->
-        <div class="card p-4 rounded-1">
-            <div class="testimonial-info d-flex justify-content-between pb-3">
-                <div class="testimonials-title">
-                    <h4><a class="text-dark" href="#">Patrick Garner Dony</a></h4>
-                    <span>Economist</span>
-                    <p>Daffodil Software Ltd.</p>
-                </div>
-                <div class="testimonials-img">
-                    <img class="rounded-circle" src="img/team-4.jpg" alt="">
-                </div>
-            </div>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates, eos quos aliquam consequatur hic laborum, mollitia culpa ut repellendus iste optio. Accusamus, corrupti ex voluptate cumque laudantium doloremque in beatae.  Voluptates, eos quos aliquam consequatur hic laborum, mollitia culpa ut repellendus iste optio. Accusamus, corrupti ex voluptate cumque laudantium doloremque in beatae?</p>
-        </div>
-        <!-- card end -->
-
-        <!-- Testimonials Card Start -->
-        <div class="card p-4 rounded-1">
-            <div class="testimonial-info d-flex justify-content-between pb-3">
-                <div class="testimonials-title">
-                    <h4><a class="text-dark" href="#">Patrick Garner Dony</a></h4>
-                    <span>Economist</span>
-                    <p>Daffodil Software Ltd.</p>
-                </div>
-                <div class="testimonials-img">
-                    <img class="rounded-circle" src="img/team-4.jpg" alt="">
-                </div>
-            </div>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates, eos quos aliquam consequatur hic laborum, mollitia culpa ut repellendus iste optio. Accusamus, corrupti ex voluptate cumque laudantium doloremque in beatae.  Voluptates, eos quos aliquam consequatur hic laborum, mollitia culpa ut repellendus iste optio. Accusamus, corrupti ex voluptate cumque laudantium doloremque in beatae?</p>
-        </div>
-        <!-- card end -->
-
-        <!-- Testimonials Card Start -->
-        <div class="card p-4 rounded-1">
-            <div class="testimonial-info d-flex justify-content-between pb-3">
-                <div class="testimonials-title">
-                    <h4><a class="text-dark" href="#">Patrick Garner Dony</a></h4>
-                    <span>Economist</span>
-                    <p>Daffodil Software Ltd.</p>
-                </div>
-                <div class="testimonials-img">
-                    <img class="rounded-circle" src="img/team-4.jpg" alt="">
-                </div>
-            </div>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates, eos quos aliquam consequatur hic laborum, mollitia culpa ut repellendus iste optio. Accusamus, corrupti ex voluptate cumque laudantium doloremque in beatae.  Voluptates, eos quos aliquam consequatur hic laborum, mollitia culpa ut repellendus iste optio. Accusamus, corrupti ex voluptate cumque laudantium doloremque in beatae?</p>
-        </div>
-        <!-- card end -->
-        
-    </div>
-</div>
-</section>
-<!-- Testimonilas Area End -->
-
-<!-- Industries We Serve -->
-<section class="mt-10">
-  <div class="container-fluid">
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="section-title text-center">
-                    <h2 class="font-weight-bold">Industries We Serve</h2>
-                    <p class="pt-4 container">Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit, deleniti nostrum dicta iusto, amet dolores recusandae est libero voluptatibus neque natus. Ut nemo et repellat dolores ea obcaecati laboriosam commodi!</p>
-                </div>
-            </div>
-  
-            <!-- Industries We Serve Left -->
-            <div class="col-lg-12 pb-5 pt-3 wow fadeIn" data-wow-delay="0.4s">
-                <div class="industry-wave">
-                    <div class="wave-slider">
-                        <div class="wave-slider-left" id="waveContentLeft">
-                            <a href="#">
-                                <img src="img/Group 709.png" alt="">
-                                <span>Newtec Pharmaceuticals</span>
-                            </a>
-                            <a href="#">
-                                <img src="img/Group 709.png" alt="">
-                                <span>Haji Md Ibrahim Memorial Hospital</span>
-                            </a>
-                            <a href="#">
-                                <img src="img/Group 709.png" alt="">
-                                <span>People Memorial Hospital</span>
-                            </a>
-                            <a href="#">
-                                <img src="img/Group 709.png" alt="">
-                                <span>East Coast Group</span>
-                            </a>
-                            <a href="#">
-                                <img src="img/Group 709.png" alt="">
-                                <span>Green Garden Restaurant</span>
-                            </a>
-                            <a href="#">
-                                <img src="img/Group 709.png" alt="">
-                                <span>Amar Pharma</span>
-                            </a>
-                            <a href="#">
-                                <img src="img/Group 709.png" alt="">
-                                <span>Rokeya Hospital, Cumilla</span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Industries We Serve Left -->
-  
-            <!-- Industries We Serve Right -->
-            <div class="col-lg-12 pb-5 wow fadeIn" data-wow-delay="0.6s">
-                <div class="industry-wave">
-                    <div class="wave-slider">
-                        <div class="wave-slider-right" id="waveContentRight">
-                            <a href="#">
-                                <img src="img/Group 709.png" alt="">
-                                <span>Newtec Pharmaceuticals</span>
-                            </a>
-                            <a href="#">
-                                <img src="img/Group 709.png" alt="">
-                                <span>Haji Md Ibrahim Memorial Hospital</span>
-                            </a>
-                            <a href="#">
-                                <img src="img/Group 709.png" alt="">
-                                <span>People Memorial Hospital</span>
-                            </a>
-                            <a href="#">
-                                <img src="img/Group 709.png" alt="">
-                                <span>East Coast Group</span>
-                            </a>
-                            <a href="#">
-                                <img src="img/Group 709.png" alt="">
-                                <span>Green Garden Restaurant</span>
-                            </a>
-                            <a href="#">
-                                <img src="img/Group 709.png" alt="">
-                                <span>Amar Pharma</span>
-                            </a>
-                            <a href="#">
-                                <img src="img/Group 709.png" alt="">
-                                <span>Rokeya Hospital, Cumilla</span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Industries We Serve Right -->
-  
-        </div>
-    </div>
-  </div>
-</section>
-<!-- Industries We Serve End-->
-
-<!-- Certifications Section -->
-<section class="certification-section">
-  <div class="container-fluid">
-      <div class="row align-items-center">
-          <div class="col-lg-4">
-              <h2 class="mb-3">Certifications</h2>
-              <p class="text-muted">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Excepturi alias modi, ipsam magni expedita fugit.</p>
-          </div>
-          <div class="col-lg-8">
-              <div class="row justify-content-center">
-                  <div class="col-6 col-md-3 mb-4 mb-md-0">
-                      <img src="path/to/certification1.png" alt="Certification" class="certification-badge w-100">
-                  </div>
-                  <div class="col-6 col-md-3 mb-4 mb-md-0">
-                      <img src="path/to/certification2.png" alt="Certification" class="certification-badge w-100">
-                  </div>
-                  <div class="col-6 col-md-3 mb-4 mb-md-0">
-                      <img src="path/to/certification3.png" alt="Certification" class="certification-badge w-100">
-                  </div>
-                  <div class="col-6 col-md-3">
-                      <img src="path/to/certification4.png" alt="Certification" class="certification-badge w-100">
-                  </div>
-              </div>
-          </div>
-      </div>
-  </div>
-</section>
+  </section>
+  <!-- Trusted by Clients End-->
 
 
-<!-- Footer Section -->
-<footer class="footer">
-  <div class="container-fluid">
+  <!-- Testimonilas Area -->
+  <section class="mt-10 bg-light-blue py-10">
+    <div class="container-fluid">
       <div class="row">
-          <!-- Company Info -->
-          <div class="col-lg-3 mb-4 mb-lg-0">
-              <img src="images/logo-dsl.png" alt="DSL Logo" class="footer-logo">
-              <p>Daffodil Software Ltd</p>
-              <p class="mb-2">- Your Trusted Partner in Digital Success</p>
-              <p class="mb-2"><i class="fas fa-phone me-2"></i> +8801713493026</p>
-              <p class="mb-2"><i class="fas fa-envelope me-2"></i> software@daffodil-bd.com</p>
-              <p><i class="fas fa-location-dot me-2"></i> Daffodil Tower, 102/1, Shukrabad, Mirpur Road, Dhanmondi, Dhaka-1207</p>
-          </div>
+        <div class="col-lg-12 section-title text-center">
+          <h2 class="font-weight-bold">Client Experience</h2>
+          <p class="pt-4 container">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illum rerum explicabo quia
+            ipsa adipisci. Atque nam repudiandae nemo, dolor suscipit voluptatem ut deserunt? Cupiditate cum consectetur
+            vitae quis, nam delectus.</p>
+        </div>
+      </div>
 
-          <!-- Quick Links -->
-          <div class="col-6 col-lg-3">
+      <div class="testimonial-carousel owl-carousel  mt-5">
+        <!-- Testimonials Card Start -->
+        <div class="card p-4 rounded-3 border-0">
+          <div class="testimonial-info d-flex justify-content-between pb-3">
+            <div class="testimonials-title">
+              <h4><a class="text-dark" href="#">Patrick Garner Dony</a></h4>
+              <span>Economist</span>
+              <p>Daffodil Software Ltd.</p>
+            </div>
+            <div class="testimonials-img">
+              <img class="rounded-circle" src="images/team-1.jpg" alt="">
+            </div>
+          </div>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates, eos quos aliquam consequatur hic
+            laborum, mollitia culpa ut repellendus iste optio. Accusamus, corrupti ex voluptate cumque laudantium
+            doloremque in beatae. Voluptates, eos quos aliquam consequatur hic laborum, mollitia culpa ut repellendus
+            iste optio. Accusamus, corrupti ex voluptate cumque laudantium doloremque in beatae?</p>
+        </div>
+        <!-- card end -->
+
+        <!-- Testimonials Card Start -->
+        <div class="card p-4 rounded-3 border-0">
+          <div class="testimonial-info d-flex justify-content-between pb-3">
+            <div class="testimonials-title">
+              <h4><a class="text-dark" href="#">Patrick Garner Dony</a></h4>
+              <span>Economist</span>
+              <p>Daffodil Software Ltd.</p>
+            </div>
+            <div class="testimonials-img">
+              <img class="rounded-circle" src="images/team-2.jpg" alt="">
+            </div>
+          </div>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates, eos quos aliquam consequatur hic
+            laborum, mollitia culpa ut repellendus iste optio. Accusamus, corrupti ex voluptate cumque laudantium
+            doloremque in beatae. Voluptates, eos quos aliquam consequatur hic laborum, mollitia culpa ut repellendus
+            iste optio. Accusamus, corrupti ex voluptate cumque laudantium doloremque in beatae?</p>
+        </div>
+        <!-- card end -->
+
+        <!-- Testimonials Card Start -->
+        <div class="card p-4 rounded-3 border-0">
+          <div class="testimonial-info d-flex justify-content-between pb-3">
+            <div class="testimonials-title">
+              <h4><a class="text-dark" href="#">Patrick Garner Dony</a></h4>
+              <span>Economist</span>
+              <p>Daffodil Software Ltd.</p>
+            </div>
+            <div class="testimonials-img">
+              <img class="rounded-circle" src="images/team-3.jpg" alt="">
+            </div>
+          </div>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates, eos quos aliquam consequatur hic
+            laborum, mollitia culpa ut repellendus iste optio. Accusamus, corrupti ex voluptate cumque laudantium
+            doloremque in beatae. Voluptates, eos quos aliquam consequatur hic laborum, mollitia culpa ut repellendus
+            iste optio. Accusamus, corrupti ex voluptate cumque laudantium doloremque in beatae?</p>
+        </div>
+        <!-- card end -->
+
+        <!-- Testimonials Card Start -->
+        <div class="card p-4 rounded-3 border-0">
+          <div class="testimonial-info d-flex justify-content-between pb-3">
+            <div class="testimonials-title">
+              <h4><a class="text-dark" href="#">Patrick Garner Dony</a></h4>
+              <span>Economist</span>
+              <p>Daffodil Software Ltd.</p>
+            </div>
+            <div class="testimonials-img">
+              <img class="rounded-circle" src="images/team-4.jpg" alt="">
+            </div>
+          </div>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates, eos quos aliquam consequatur hic
+            laborum, mollitia culpa ut repellendus iste optio. Accusamus, corrupti ex voluptate cumque laudantium
+            doloremque in beatae. Voluptates, eos quos aliquam consequatur hic laborum, mollitia culpa ut repellendus
+            iste optio. Accusamus, corrupti ex voluptate cumque laudantium doloremque in beatae?</p>
+        </div>
+        <!-- card end -->
+
+      </div>
+    </div>
+  </section>
+  <!-- Testimonilas Area End -->
+
+  <!-- Industries We Serve -->
+  <section class="py-10">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="section-title text-center">
+            <h2 class="font-weight-bold">Industries We Serve</h2>
+            <p class="pt-4 container">Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit, deleniti nostrum
+              dicta iusto, amet dolores recusandae est libero voluptatibus neque natus. Ut nemo et repellat dolores ea
+              obcaecati laboriosam commodi!</p>
+          </div>
+        </div>
+
+        <!-- Industries We Serve Left -->
+        <div class="col-lg-12 mt-5">
+          <div class="industry-wave">
+              <div class="wave-slider">
+                  <div class="wave-slider-left" id="waveContentLeft">
+                      <a href="#">
+                          <img src="images/NutecAgro.png" alt="">
+                          <p>Newtec Pharmaceuticals</p>
+                      </a>
+                      <a href="#">
+                          <img src="images/Haji Md Ibrahim Memorial Hospital.png" alt="">
+                          <p>Haji Md Ibrahim Memorial Hospital</p>
+                      </a>
+                      <a href="#">
+                          <img src="images/People Memorial Hospital.png" alt="">
+                          <p>People Memorial Hospital</p>
+                      </a>
+                      <a href="#">
+                          <img src="images/East Coast Group.ico" alt="">
+                          <p>East Coast Group</p>
+                      </a>
+                      <a href="#">
+                          <img src="images/Green Garden Restaurant.png" alt="">
+                          <p>Green Garden Restaurant</p>
+                      </a>
+                      <a href="#">
+                          <img src="images/Amar Pharma.png" alt="">
+                          <p>Amar Pharma</p>
+                      </a>
+                      <a href="#">
+                          <img src="images/Rokeya Hospital, Cumilla.png" alt="">
+                          <p>Rokeya Hospital, Cumilla</p>
+                      </a>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <!-- Industries We Serve Left -->
+
+        <!-- Industries We Serve Right -->
+        <div class="col-lg-12 mt-5">
+          <div class="industry-wave">
+              <div class="wave-slider">
+                  <div class="wave-slider-right" id="waveContentRight">
+                      <a href="#">
+                          <img src="images/NutecAgro.png" alt="">
+                          <p>Newtec Pharmaceuticals</p>
+                      </a>
+                      <a href="#">
+                          <img src="images/Haji Md Ibrahim Memorial Hospital.png" alt="">
+                          <p>Haji Md Ibrahim Memorial Hospital</p>
+                      </a>
+                      <a href="#">
+                          <img src="images/People Memorial Hospital.png" alt="">
+                          <p>People Memorial Hospital</p>
+                      </a>
+                      <a href="#">
+                          <img src="images/East Coast Group.ico" alt="">
+                          <p>East Coast Group</p>
+                      </a>
+                      <a href="#">
+                          <img src="images/Green Garden Restaurant.png" alt="">
+                          <p>Green Garden Restaurant</p>
+                      </a>
+                      <a href="#">
+                          <img src="images/Amar Pharma.png" alt="">
+                          <p>Amar Pharma</p>
+                      </a>
+                      <a href="#">
+                          <img src="images/Rokeya Hospital, Cumilla.png" alt="">
+                          <p>Rokeya Hospital, Cumilla</p>
+                      </a>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <!-- Industries We Serve Right -->
+
+      </div>
+    </div>
+    </div>
+  </section>
+  <!-- Industries We Serve End-->
+
+  <!-- Certifications Section -->
+  <section class="certification-section">
+    <div class="container-fluid">
+      <div class="row align-items-center">
+        <div class="col-lg-4 section-title">
+          <h2 class="mb-3 font-weight-bold">Certifications</h2>
+          <p class="text-muted">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Excepturi alias modi, ipsam
+            magni expedita fugit.</p>
+        </div>
+        <div class="col-lg-8">
+          <div class="row justify-content-center">
+            <div class="col-6 col-md-3 mb-4 mb-md-0">
+              <img src="images/c1.png" alt="Certification" class="certification-badge w-100">
+            </div>
+            <div class="col-6 col-md-3 mb-4 mb-md-0">
+              <img src="images/c1.png" alt="Certification" class="certification-badge w-100">
+            </div>
+            <div class="col-6 col-md-3 mb-4 mb-md-0">
+              <img src="images/c1.png" alt="Certification" class="certification-badge w-100">
+            </div>
+            <div class="col-6 col-md-3">
+              <img src="images/c1.png" alt="Certification" class="certification-badge w-100">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer Start -->
+  <footer class="footer py-10 text-light">
+    <div class="container-fluid">
+      <div class="row g-4">
+        <div class="col-md-4">
+          <a href="index.html" class="d-block mb-3">
+            <img src="images/logo-dsl.png" alt="DSL Logo" class="footer-logo">
+          </a>
+          <p>Daffodil Software Ltd<br>- Your Trusted Partner in Digital Success</p>
+          <div class="pt-4 contact-info">
+            <p><i class="ri-phone-fill m-2 "></i> +8801713493026</p>
+            <p><i class="ri-mail-fill m-2 "></i> software@daffodil-bd.com</p>
+            <p><i class="ri-map-pin-fill m-2 "></i> Daffodil Tower, 102/1, Shukrabad, Mirpur Road, Dhanmondi, Dhaka-1207
+            </p>
+          </div>
+        </div>
+  
+        <div class="col-md-8 mt-5 mt-sm-0">
+          <div class="row">
+            <div class="col-12 col-md-3">
               <h5 class="mb-4">Company</h5>
-              <ul class="list-unstyled">
-                  <li class="mb-2"><a href="#">About Us</a></li>
-                  <li class="mb-2"><a href="#">Contact Us</a></li>
-                  <li class="mb-2"><a href="#">Privacy Policy</a></li>
-                  <li class="mb-2"><a href="#">Terms & Condition</a></li>
+              <ul class="list-unstyled list-gap">
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Contact Us</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms & Conditions</a></li>
               </ul>
-          </div>
-
-          <div class="col-6 col-lg-2">
+            </div>
+  
+            <div class="col-12 col-md-3">
               <h5 class="mb-4">Services</h5>
-              <ul class="list-unstyled">
-                  <li class="mb-2"><a href="#">About Us</a></li>
-                  <li class="mb-2"><a href="#">Contact Us</a></li>
-                  <li class="mb-2"><a href="#">Privacy Policy</a></li>
-                  <li class="mb-2"><a href="#">Terms & Condition</a></li>
+              <ul class="list-unstyled list-gap">
+                <li><a href="#">Web Development</a></li>
+                <li><a href="#">Mobile Apps</a></li>
+                <li><a href="#">E-commerce</a></li>
+                <li><a href="#">Cloud Solutions</a></li>
               </ul>
-          </div>
-
-          <div class="col-6 col-lg-2">
+            </div>
+  
+            <div class="col-12 col-md-3">
               <h5 class="mb-4">Products</h5>
-              <ul class="list-unstyled">
-                  <li class="mb-2"><a href="#">About Us</a></li>
-                  <li class="mb-2"><a href="#">Contact Us</a></li>
-                  <li class="mb-2"><a href="#">Privacy Policy</a></li>
-                  <li class="mb-2"><a href="#">Terms & Condition</a></li>
+              <ul class="list-unstyled list-gap">
+                <li><a href="#">Software Solutions</a></li>
+                <li><a href="#">CRM Tools</a></li>
+                <li><a href="#">Enterprise Apps</a></li>
+                <li><a href="#">SaaS Platforms</a></li>
               </ul>
-          </div>
-
-          <div class="col-6 col-lg-2">
+            </div>
+  
+            <div class="col-12 col-md-3">
               <h5 class="mb-4">Insights</h5>
-              <ul class="list-unstyled">
-                  <li class="mb-2"><a href="#">About Us</a></li>
-                  <li class="mb-2"><a href="#">Contact Us</a></li>
-                  <li class="mb-2"><a href="#">Privacy Policy</a></li>
-                  <li class="mb-2"><a href="#">Terms & Condition</a></li>
+              <ul class="list-unstyled list-gap">
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Case Studies</a></li>
+                <li><a href="#">Whitepapers</a></li>
+                <li><a href="#">Webinars</a></li>
               </ul>
+            </div>
           </div>
+  
+          <!-- Social Links -->
+          <div class="mt-5 d-flex flex-column flex-md-row align-items-center">
+            <h5 class="mb-3 mb-md-0">Connect with DSL:</h5>
+            <div class="d-flex flex-wrap gap-2 gap-md-3 footerSocial ms-md-4 ml-0 ml-sm-5">
+              <a href="#" class="btn btn-outline-light btn-sm"><i class="ri-twitter-fill"></i></a>
+              <a href="#" class="btn btn-outline-light btn-sm"><i class="ri-facebook-fill"></i></a>
+              <a href="#" class="btn btn-outline-light btn-sm"><i class="ri-youtube-fill"></i></a>
+              <a href="#" class="btn btn-outline-light btn-sm"><i class="ri-instagram-line"></i></a>
+              <a href="#" class="btn btn-outline-light btn-sm"><i class="ri-linkedin-box-fill"></i></a>
+            </div>
+          </div>
+  
+        </div>
       </div>
+  
+      <!-- Copyright -->
+      <div class="text-center text-md-start mt-10 pt-3 border-top d-flex flex-column flex-md-row align-items-center justify-content-between">
+        <p class="mb-2 mb-md-0">© 2024 Daffodil Software Ltd. All Rights Reserved.</p>
+        <p class="mb-0">Developed by Daffodil Web Team - 2024</p>
+      </div>
+  
+    </div>
+  </footer>
 
-      <!-- Social Links -->
-      <div class="mt-4">
-          <h5 class="mb-3">Connect with DSL:</h5>
-          <div class="social-links">
-              <a href="#"><i class="fab fa-twitter"></i></a>
-              <a href="#"><i class="fab fa-facebook-f"></i></a>
-              <a href="#"><i class="fab fa-youtube"></i></a>
-              <a href="#"><i class="fab fa-instagram"></i></a>
-              <a href="#"><i class="fab fa-linkedin-in"></i></a>
-          </div>
-      </div>
-
-      <!-- Footer Bottom -->
-      <div class="footer-bottom">
-          <div class="row align-items-center">
-              <div class="col-md-6 mb-3 mb-md-0">
-                  <p class="mb-0">Copyright © Daffodil Software Ltd.</p>
-              </div>
-              <div class="col-md-6 text-md-end">
-                  <p class="mb-0">Developed by Daffodil Web Team - 2024</p>
-              </div>
-          </div>
-      </div>
-  </div>
-</footer>
 
 
 

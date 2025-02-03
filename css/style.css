@@ -95,12 +95,12 @@ a:hover {
 
 .site-navbar .site-navigation .site-menu>li {
   display: inline-block;
-  padding: 10px 5px;
+  padding: 10px 15px;
 }
 
 .site-navbar .site-navigation .site-menu>li>a {
   padding: 20px 10px;
-  color: rgba(255, 255, 255, 0.6);
+  color: rgba(255, 255, 255, 0.7);
   font-size: 15px;
   text-decoration: none !important;
 }
@@ -608,12 +608,24 @@ a:hover {
   color: black !important;
 }
 
-.DSlGlance{
-  margin-top: -320px;
+.DSlGlance {
+  margin-top: -400px;
 }
 
-.whiteSectionTitle{
-  margin-top: 200px;
+@media (max-width: 767px) {
+  .DSlGlance {
+    margin-top: -120px;
+  }
+}
+
+.whiteSectionTitle {
+  margin-top: 300px;
+}
+
+@media (max-width: 767px) {
+  .whiteSectionTitle {
+    margin-top: 50px;
+  }
 }
 
 
@@ -630,6 +642,8 @@ p {
   margin: 0;
 }
 
+/* product-card */
+
 .product-card img{
   width: 100px;
   height: 100px;
@@ -637,7 +651,7 @@ p {
   padding-bottom: 30px;
 }
 .product-card{
-  margin-bottom: 50px;
+  margin-bottom: 100px;
 }
 
 .product-card p {
@@ -647,24 +661,25 @@ p {
 /* For small devices (max-width: 576px) */
 @media (max-width: 576px) {
   .product-card p {
-    width: 100%; /* Set to 100% on small devices */
+    width: 100%; 
   }
 }
 
 .servieItem{
-  margin-bottom: 50px;
+  margin-bottom: 100px;
 }
 .servieItem img{
   width: 80px;
 }
+
 .servieItem p {
-  width: 80%; /* Default width for larger devices */
+  width: 80%; 
 }
 
 /* For small devices (max-width: 576px) */
 @media (max-width: 576px) {
   .servieItem p {
-    width: 100%; /* Set to 100% on small devices */
+    width: 100%; 
   }
 }
 
@@ -692,116 +707,91 @@ p {
 }
 
 /*============================================
-    Technologies Area
+    Pushing Your Business
 *=============================================*/
-.tech-items{
-  background-color:   #f5f8ff   !important;
+.bg-light-blue {
+  background-color: #f5f8ff;
 }
-.tech-item {
-  font-size: 14px;
-  border: none;
-}
-
-.tech-item a {
-  color: #000;
-  font-weight: 500;
-}
-
-.tech-item.active {
-  background-color: #c1bbff !important;
-  /* Highlight color for active item */
-  border-radius: 4px;
-  padding: 0px 5px;
+.tech-pill {
+  padding: 8px 16px;
+  border-radius: 25px;
+  color: #464646;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin: 5px;
+  background-color: white;
 }
 
-.tech-item:hover {
+.tech-pill:hover {
+  background-color: #e8e5ff;
   color: #7267f0;
 }
 
-.nav-icon {
-  font-size: 18px;
-  margin-right: 5px;
+.tech-pill.active {
+  background-color: #c1bbff;
+  color: #7267f0;
 }
 
-.app-img{
-  width: 60px;
+.tech-pill i {
+  font-size: 1.2em;
 }
-
-/*============================================
-  Technologies End
-*=============================================*/
-
-.tech-item {
-  display: inline-flex;
-  align-items: center;
-  padding: 8px 16px;
-  border-radius: 50px;
-  color: #6c757d;
-  text-decoration: none;
-  transition: all 0.3s ease;
-  margin: 5px;
-}
-
-.tech-item:hover {
-  background-color: #f8f9fa;
-  color: #0d6efd;
-}
-
-.tech-item.active {
-  background-color: #e7f1ff;
-  color: #0d6efd;
-}
-
-.tech-item i {
-  margin-right: 8px;
-  font-size: 1.2rem;
-}
-
 
 .app-card {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  border: 1px solid #eee;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  height: 100%;
 }
 
-.app-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-}
-
-.app-img img {
+.app-img {
   width: 60px;
   height: 60px;
-  object-fit: contain;
-}
-
-/* Custom styles for owl dots */
-.owl-dots {
-  margin-top: 20px;
   display: flex;
+  align-items: center;
   justify-content: center;
-  gap: 8px;
 }
 
-.owl-dot {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background: #D1D1D1 !important;
-  transition: all 0.3s ease;
+.tech-cards {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  padding: 20px 0;
 }
 
-.owl-dot.active {
-  background: #0d6efd !important;
-  width: 24px;
-  border-radius: 5px;
+.tech-cards .app-card {
+  min-width: 280px;
 }
 
-/* Hide additional dots if they appear */
-.owl-dot:nth-child(n+4) {
-  display: none !important;
+.MobileAppCard img {
+  width: 80px !important;
+  height: 80px;
+  object-fit: cover;
+  margin-bottom: 1.5rem;
 }
 
+@media (max-width: 768px) {
+  .MobileAppCard {
+      margin-bottom: 20px; 
+  }
 
+  .mobileApp {
+      margin-bottom: 30px;
+  }
+  .testimonial-carousel .owl-stage {
+      display: flex;
+      justify-content: flex-start;
+  }
+
+  .testimonial-carousel .owl-item {
+      text-align: left !important;
+  }
+}
+/*============================================
+  Pushing Your Business End
+*=============================================*/
 
 /*============================================
     Clients Slide start
@@ -817,7 +807,7 @@ p {
   position: absolute;
   top: 0;
   content: '';
-  width: 250px;
+  width: 100px;
   height: 100%;
   z-index: 2;
 }
@@ -875,6 +865,27 @@ p {
   text-align: center;
 }
 
+
+.wave-slider:before,
+.wave-slider:after {
+  position: absolute;
+  top: 0;
+  content: '';
+  width: 100px;
+  height: 100%;
+  z-index: 2;
+}
+
+.wave-slider:before {
+  left: 0;
+  background: linear-gradient(to left, rgba(255, 255, 255, 0), rgb(255, 255, 255));
+}
+
+.wave-slider:after {
+  right: 0;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0), rgb(255, 255, 255));
+}
+
 .industry-wave {
   overflow: hidden;
   position: relative;
@@ -887,32 +898,51 @@ p {
 .wave-slider-left {
   display: flex;
   white-space: nowrap;
-  animation: scroll 30s linear infinite;
+  animation: scroll 60s linear infinite;
 }
 
 .wave-slider-right {
   display: flex;
   white-space: nowrap;
-  animation: scrollRight 30s linear infinite;
+  animation: scrollRight 60s linear infinite;
 }
 
 .wave-slider-left a {
-  display: inline-flex;
-  margin-right: 50px; /* Adjust spacing as needed */
+  background-color: rgb(255, 255, 255);
+  border: 1px solid rgb(228, 228, 228);
+  padding: 10px 20px;
+  border-radius: 15px;
+  margin-right: 20px; /* Adjust spacing as needed */
 }
 
 .wave-slider-right a {
-  display: inline-flex;
-  margin-right: 50px; /* Adjust spacing as needed */
+  background-color: rgb(255, 255, 255);
+  border: 1px solid rgb(228, 228, 228);
+  padding: 10px 20px;
+  border-radius: 15px;
+  margin-right: 20px; /* Adjust spacing as needed */
 }
 
 .wave-slider-left a img{
-  height: 25px;
+  height: 40px;
   margin-right: 10px;
+  object-fit: cover;
+}
+
+.wave-slider-left a p{
+  padding-top: 10px;
+  color: rgb(39, 39, 39);
+  font-weight: 400;
+}
+
+.wave-slider-right a p{
+  padding-top: 10px;
+  color: rgb(39, 39, 39);
+  font-weight: 400;
 }
 
 .wave-slider-right a img{
-  height: 25px;
+  height: 40px;
   margin-right: 10px;
 }
 
@@ -950,17 +980,17 @@ Testimonilas Area
 
 /*** Testimonial ***/
 .owl-carousel .owl-dots {
-  text-align: center;     /* Center the dots */
-  padding-top: 15px;      /* Add spacing above the dots */
+  text-align: center;     
+  padding-top: 15px;      
 }
 
 .owl-carousel .owl-dot {
-  margin: 0 5px;          /* Adjust spacing between dots */
+  margin: 0 5px;        
 }
 
 .owl-carousel .owl-dot.active span {
-  opacity: 1;             /* Highlight active dot */
-  background-color: #007bff; /* Active dot color */
+  opacity: 1;             
+  background-color: #007bff; 
 }
 
 .testimonial-carousel .owl-dot {
@@ -985,6 +1015,10 @@ Testimonilas Area
   color: white; /* Adjust text color for contrast */
   transition: background-color 0.3s ease;
 }
+
+.card p{
+  color: #686868;
+}
 /*============================================
   END Testimonial Area
 *=============================================*/
@@ -1004,47 +1038,109 @@ Testimonilas Area
   transform: translateY(-5px);
 }
 
-/* Footer Styles */
 .footer {
-  background-color: #080B1A;
-  color: #fff;
-  padding: 60px 0 20px;
+  background-color: #040210;
 }
 
 .footer a {
-  color: #fff;
+  color: rgba(255, 255, 255, 0.7);
   text-decoration: none;
-  transition: color 0.3s ease;
+  transition: 0.3s;
+}
+
+.list-gap li {
+  margin-bottom: 8px;
+}
+.contact-info p {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px; 
+  color: white;
 }
 
 .footer a:hover {
-  color: #0d6efd;
+  color: #ffffff;
 }
 
-.footer-logo {
-  max-width: 150px;
-  margin-bottom: 20px;
-}
-
-.social-links a {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
+.footer .btn-outline-light {
   width: 36px;
   height: 36px;
-  border-radius: 50%;
-  background-color: rgba(255, 255, 255, 0.1);
-  margin-right: 10px;
-  transition: background-color 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  transition: 0.3s;
 }
 
-.social-links a:hover {
-  background-color: #0d6efd;
-  color: #fff;
+.footer .btn-outline-light:hover {
+  background: var(--primary);
+  color: white;
 }
 
-.footer-bottom {
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-  padding-top: 20px;
-  margin-top: 40px;
+.footer .border-top {
+  border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+.footerSocial a{
+  margin: 0px 10px;
+}
+
+
+
+
+.search-box {
+  position: absolute;
+  top: 100%;            /* Position it below the navbar */
+  left: 0;             /* Stretch from left */
+  right: 0;            
+  padding: 15px;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+  display: none;
+  z-index: 1000;
+}
+
+.search-box.active {
+  display: block;
+}
+
+.search-box form {
+  max-width: 600px;    /* Limit the form width */
+  margin: 0 auto;      /* Center the form */
+  position: relative;
+}
+
+.search-box input {
+  width: 100%;
+  padding: 8px 40px 8px 15px;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  outline: none;
+}
+
+.search-box .search-btn {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: #666;
+  cursor: pointer;
+}
+
+/* Optional: Add animation */
+@keyframes slideDown {
+  from {
+      opacity: 0;
+      transform: translateY(-10px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+.search-box.active {
+  display: block;
+  animation: slideDown 0.3s ease;
 }
