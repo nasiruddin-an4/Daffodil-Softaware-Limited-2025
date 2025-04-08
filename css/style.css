@@ -1235,6 +1235,9 @@ Testimonilas Area
   }
 }
 
+.bg-darkBlue2{
+  background-image: linear-gradient(#0b0538, #150B5E) !important;
+}
 
 .service-card {
   border-radius: 12px;
