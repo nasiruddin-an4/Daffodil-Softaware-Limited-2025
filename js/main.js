@@ -167,60 +167,63 @@ document.addEventListener('DOMContentLoaded', function() {
         // Add your search logic here
     };
 });
-  
+
 
 $(document).ready(function() {
-    // Initialize all owl carousels
+    // Common carousel options
     const carouselOptions = {
-      loop: true,
-      margin: 20,
-      nav: false,
-      dots: true,
-      autoplay: true,
-      autoplayTimeout: 5000,
-      autoplayHoverPause: true,
-      responsive: {
-        0: {
-          items: 1
-        },
-        576: {
-          items: 2
-        },
-        992: {
-          items: 3
+        loop: true,
+        margin: 20,
+        nav: false,
+        dots: true,           // Enable dots navigation
+        dotsEach: false,      // Show dots for each item (optional, adjust as needed)
+        autoplay: true,
+        autoplayTimeout: 5000,
+        autoplayHoverPause: true,
+        responsive: {
+            0: {
+                items: 1
+            },
+            576: {
+                items: 2
+            },
+            992: {
+                items: 3
+            }
         }
-      }
     };
-    
-    // Initialize all carousels
-    $('.mobile-carousel').owlCarousel(carouselOptions);
-    $('.frontend-carousel').owlCarousel(carouselOptions);
-    $('.backend-carousel').owlCarousel(carouselOptions);
-    $('.database-carousel').owlCarousel(carouselOptions);
-    $('.cms-carousel').owlCarousel(carouselOptions);
-    $('.tools-carousel').owlCarousel(carouselOptions);
-    $('.integrations-carousel').owlCarousel(carouselOptions);
-    $('.cloud-carousel').owlCarousel(carouselOptions);
-    $('.devops-carousel').owlCarousel(carouselOptions);
-    
+
+    // Dynamically initialize all carousels with class 'owl-carousel'
+    $('.owl-carousel').each(function() {
+        $(this).owlCarousel(carouselOptions);
+    });
+
     // Tab switching functionality
     $('.tech-pill').on('click', function(e) {
-      e.preventDefault();
-      
-      // Remove active class from all pills
-      $('.tech-pill').removeClass('active');
-      
-      // Add active class to clicked pill
-      $(this).addClass('active');
-      
-      // Get the tab ID
-      const tabId = $(this).data('tab');
-      $('.tab-content').removeClass('active').hide();
-      
-      // Show the selected tab content
-      $(`#${tabId}-tab`).addClass('active').fadeIn(300);
-      
-      // Refresh the carousel for the active tab to fix any display issues
-      $(`.${tabId}-carousel`).trigger('refresh.owl.carousel');
+        e.preventDefault();
+
+        // Remove active class from all pills
+        $('.tech-pill').removeClass('active');
+
+        // Add active class to clicked pill
+        $(this).addClass('active');
+
+        // Get the tab ID
+        const tabId = $(this).data('tab');
+
+        // Hide all tab contents and remove active class
+        $('.tab-content').removeClass('active').hide();
+
+        // Show the selected tab content
+        $(`#${tabId}-tab`).addClass('active').fadeIn(300);
+
+        // Refresh all carousels in the active tab
+        $(`#${tabId}-tab .owl-carousel`).trigger('refresh.owl.carousel');
     });
-  });
+
+    // Ensure initial active tab's carousel is properly initialized
+    const initialActiveTab = $('.tech-pill.active').data('tab');
+    if (initialActiveTab) {
+        $(`#${initialActiveTab}-tab .owl-carousel`).trigger('refresh.owl.carousel');
+    }
+});
