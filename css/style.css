@@ -992,6 +992,25 @@ Testimonilas Area
   background-color: #007bff; 
 }
 
+.owl-dots {
+  display: block !important;
+  text-align: center;
+  margin-top: 20px; /* Adjust spacing as needed */
+}
+.owl-dot {
+  display: inline-block;
+  margin: 0 5px;
+}
+.owl-dot span {
+  width: 20px;
+  height: 5px;
+  background: #ccc; /* Default color */
+  display: block;
+}
+.owl-dot.active span {
+  background: #007bff; /* Active dot color */
+}
+
 .testimonial-carousel .owl-dot {
   margin-top: 30px;
   display: inline-block;
