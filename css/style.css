@@ -1234,3 +1234,123 @@ Testimonilas Area
     transform: translateY(0);
   }
 }
+
+
+.service-card {
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  background: white;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-top: 60px;
+}
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+.icon-box {
+  width: 55px;
+  height: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  margin-bottom: 15px;
+  font-size: 1.5rem;
+}
+
+
+
+ /* Add these styles to your existing CSS */
+ .tabs-container {
+  width: 100%;
+  overflow-x: auto;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch; 
+  scrollbar-width: none; 
+  -ms-overflow-style: none; 
+  padding-bottom: 5px;
+  text-align: center; 
+}
+
+/* Hide scrollbar for Chrome/Safari */
+.tabs-container::-webkit-scrollbar {
+  display: none;
+}
+
+/* Keep tabs in a row without wrapping */
+.tabs-container .tabs-wrapper {
+  display: inline-flex;
+  padding: 10px 5px;
+  margin: 0 auto;
+}
+
+/* Optional visual indicator that there's more content */
+.tabs-container::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 30px;
+  background: linear-gradient(to right, rgba(248, 250, 255, 0), rgba(248, 250, 255, 0.8));
+  pointer-events: none;
+}
+
+
+.bg-light-blue {
+  background-color: #f8faff;
+}
+
+.tech-pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 16px;
+  margin: 5px;
+  background-color: #fff;
+  color: #555;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.tech-pill i {
+  margin-right: 8px;
+}
+
+.tech-pill.active {
+  background-color: #e6eaff;
+  color: #4361ee;
+  font-weight: 600;
+}
+
+.tech-pill:hover {
+  background-color: #e6eaff;
+  color: #4361ee;
+  transform: translateY(-2px);
+}
+
+.MobileAppCard {
+  transition: all 0.3s ease;
+  height: 100%;
+}
+
+.MobileAppCard:hover {
+  transform: translateY(-5px);
+}
+
+.MobileAppCard img {
+  height: 60px;
+  width: auto;
+  margin-bottom: 15px;
+  object-fit: contain;
+}
+
+.tab-content {
+  display: none;
+}
+
+.tab-content.active {
+  display: block;
+}

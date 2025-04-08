@@ -168,3 +168,59 @@ document.addEventListener('DOMContentLoaded', function() {
     };
 });
   
+
+$(document).ready(function() {
+    // Initialize all owl carousels
+    const carouselOptions = {
+      loop: true,
+      margin: 20,
+      nav: false,
+      dots: true,
+      autoplay: true,
+      autoplayTimeout: 5000,
+      autoplayHoverPause: true,
+      responsive: {
+        0: {
+          items: 1
+        },
+        576: {
+          items: 2
+        },
+        992: {
+          items: 3
+        }
+      }
+    };
+    
+    // Initialize all carousels
+    $('.mobile-carousel').owlCarousel(carouselOptions);
+    $('.frontend-carousel').owlCarousel(carouselOptions);
+    $('.backend-carousel').owlCarousel(carouselOptions);
+    $('.database-carousel').owlCarousel(carouselOptions);
+    $('.cms-carousel').owlCarousel(carouselOptions);
+    $('.tools-carousel').owlCarousel(carouselOptions);
+    $('.integrations-carousel').owlCarousel(carouselOptions);
+    $('.cloud-carousel').owlCarousel(carouselOptions);
+    $('.devops-carousel').owlCarousel(carouselOptions);
+    
+    // Tab switching functionality
+    $('.tech-pill').on('click', function(e) {
+      e.preventDefault();
+      
+      // Remove active class from all pills
+      $('.tech-pill').removeClass('active');
+      
+      // Add active class to clicked pill
+      $(this).addClass('active');
+      
+      // Get the tab ID
+      const tabId = $(this).data('tab');
+      $('.tab-content').removeClass('active').hide();
+      
+      // Show the selected tab content
+      $(`#${tabId}-tab`).addClass('active').fadeIn(300);
+      
+      // Refresh the carousel for the active tab to fix any display issues
+      $(`.${tabId}-carousel`).trigger('refresh.owl.carousel');
+    });
+  });

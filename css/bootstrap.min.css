@@ -7131,6 +7131,9 @@ button.bg-light:focus {
   background-image: linear-gradient(#150B5E, #0b0538) !important;
 }
 
+.bg-darkBlue2{
+  background-image: linear-gradient(#0b0538, #150B5E) !important;
+}
 .text-darkBlue{
   color: #150B5E !important;
 }
