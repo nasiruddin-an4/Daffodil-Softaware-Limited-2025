@@ -1002,7 +1002,7 @@ Testimonilas Area
   margin: 0 5px;
 }
 .owl-dot span {
-  width: 20px;
+  width: 30px;
   height: 5px;
   background: #ccc; /* Default color */
   display: block;
@@ -1015,8 +1015,6 @@ Testimonilas Area
   margin-top: 30px;
   display: inline-block;
   margin-right: 10px;
-  width: 40px;
-  height: 4px;
   background: #838383;
   transition: .5s;
 }
@@ -1375,4 +1373,49 @@ Testimonilas Area
 
 .tab-content.active {
   display: block;
+}
+
+.agency-content {
+  padding-right: 2rem;
+}
+
+.stats-card {
+  max-width: 250px;
+}
+
+.marquee-container {
+  width: 100%;
+}
+
+.marquee-content {
+  display: flex;
+  animation: marquee 20s linear infinite;
+}
+
+.logo-slide {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.logo-slide img {
+  transition: opacity 0.3s ease;
+}
+
+.logo-slide img:hover {
+  opacity: 1;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Pause animation on hover */
+.marquee-container:hover .marquee-content {
+  animation-play-state: paused;
 }
