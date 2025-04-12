@@ -227,3 +227,20 @@ $(document).ready(function() {
         $(`#${initialActiveTab}-tab .owl-carousel`).trigger('refresh.owl.carousel');
     }
 });
+
+
+// Get references to elements
+const videoModal = document.getElementById('videoModal');
+const youtubeIframe = document.getElementById('youtubeIframe');
+const youtubeVideoId = 'dQw4w9WgXcQ'; // Replace with your actual YouTube video ID
+
+// Add event listeners for modal events
+videoModal.addEventListener('show.bs.modal', function () {
+    // Set the YouTube video source with autoplay parameter
+    youtubeIframe.src = `https://www.youtube.com/embed/${youtubeVideoId}?autoplay=1`;
+});
+
+videoModal.addEventListener('hidden.bs.modal', function () {
+    // Clear the iframe source to stop the video when modal is closed
+    youtubeIframe.src = '';
+});
