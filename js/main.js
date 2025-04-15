@@ -228,19 +228,38 @@ $(document).ready(function() {
     }
 });
 
-
-// Get references to elements
-const videoModal = document.getElementById('videoModal');
-const youtubeIframe = document.getElementById('youtubeIframe');
-const youtubeVideoId = 'dQw4w9WgXcQ'; // Replace with your actual YouTube video ID
-
-// Add event listeners for modal events
-videoModal.addEventListener('show.bs.modal', function () {
-    // Set the YouTube video source with autoplay parameter
-    youtubeIframe.src = `https://www.youtube.com/embed/${youtubeVideoId}?autoplay=1`;
-});
-
-videoModal.addEventListener('hidden.bs.modal', function () {
-    // Clear the iframe source to stop the video when modal is closed
-    youtubeIframe.src = '';
+//Sorting JS
+document.addEventListener('DOMContentLoaded', function() {
+    // Get the dropdown toggle button
+    const dropdownToggle = document.getElementById('sortDropdown');
+    const dropdownMenu = dropdownToggle.nextElementSibling;
+    
+    // Add click event listener to toggle dropdown
+    dropdownToggle.addEventListener('click', function(e) {
+        e.preventDefault();
+        dropdownMenu.classList.toggle('show');
+    });
+    
+    // Close the dropdown when clicking outside
+    window.addEventListener('click', function(e) {
+        if (!dropdownToggle.contains(e.target)) {
+            dropdownMenu.classList.remove('show');
+        }
+    });
+    
+    // Add click event listeners to dropdown items
+    const dropdownItems = document.querySelectorAll('.dropdown-item');
+    dropdownItems.forEach(item => {
+        item.addEventListener('click', function(e) {
+            e.preventDefault();
+            // Here you can add logic for sorting
+            
+            // Update the button text to show selected sort option
+            const selectedText = this.textContent;
+            dropdownToggle.innerHTML = 'Sort by: ' + selectedText + ' <i class="fas fa-sort-alpha-down ms-2"></i>';
+            
+            // Hide dropdown after selection
+            dropdownMenu.classList.remove('show');
+        });
+    });
 });

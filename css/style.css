@@ -1440,7 +1440,7 @@ Testimonilas Area
   padding: 100px 0px;
 }
 .card{
-  background-color: #05003b;
+  background-color: #ffffff;
   border-radius: 10px;
 }
 .icon-circle {
@@ -1836,4 +1836,68 @@ textarea.form-control {
 .dropdown-toggle::after {
   float: right;
   margin-top: 8px;
+}
+
+ /* All Products page  */
+.dropdown-menu.show {
+  display: block;
+  position: absolute;
+  transform: translate3d(0px, 38px, 0px);
+  top: 0px;
+  left: auto;
+  right: 0px;
+  will-change: transform;
+}
+
+.dropdown-item:hover {
+  background-color: #f8f9fa;
+}
+
+.dropdown-item i {
+  width: 20px;
+  text-align: center;
+}
+
+/* Pagination styles */
+.pagination .page-link {
+  color: #333;
+  border: none;
+  margin: 0 2px;
+}
+
+.pagination .page-item.active .page-link {
+  background-color: #007bff;
+  border-color: #007bff;
+}
+
+.card-hover-shadow {
+  transition: all 0.3s ease;
+  padding: 30px !important;
+}
+
+.card-hover-shadow:hover {
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08); 
+  transform: translateY(-5px);
+  
+}
+
+.view-morebtn {
+  background-image: linear-gradient(#150B5E, #0b0538) !important;
+  color: #fff;
+  border: none;
+  padding: 10px 24px;
+  font-weight: 500;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+}
+
+.view-morebtn:hover {
+  color: white;
+  box-shadow: 0 10px 25px rgba(21, 11, 94, 0.4);
+  transform: translateY(-3px);
+  text-decoration: none;
 }
