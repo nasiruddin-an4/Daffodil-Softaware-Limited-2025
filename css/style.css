@@ -2055,3 +2055,11 @@ textarea.form-control {
   background: linear-gradient(90deg, #3b82f6, #60a5fa);
   border-radius: 2px;
 }
+
+.clearfix img {
+  max-width: 40%;
+  height: auto;
+}
+.testFloat{
+  border: none;
+}
