@@ -138,35 +138,35 @@ $(".tech-pill").click(function (e) {
 
 
 
-document.addEventListener('DOMContentLoaded', function() {
-    const searchToggle = document.getElementById('searchToggle');
-    const searchBox = document.getElementById('searchBox');
-    const searchInput = document.getElementById('searchInput');
-
-    // Toggle search box
-    searchToggle.addEventListener('click', function(e) {
-        e.preventDefault();
-        searchBox.classList.toggle('active');
-        if (searchBox.classList.contains('active')) {
-            searchInput.focus();
-        }
-    });
-
-    // Close search box when clicking outside
-    document.addEventListener('click', function(e) {
-        if (!searchBox.contains(e.target) && !searchToggle.contains(e.target)) {
-            searchBox.classList.remove('active');
-        }
-    });
-
-    // Handle search form submission
-    window.handleSearch = function(e) {
-        e.preventDefault();
-        const query = searchInput.value;
-        console.log('Searching for:', query);
-        // Add your search logic here
-    };
-});
+// document.addEventListener('DOMContentLoaded', function() {
+//     const searchToggle = document.getElementById('searchToggle');
+//     const searchBox = document.getElementById('searchBox');
+//     const searchInput = document.getElementById('searchInput');
+//
+//     // Toggle search box
+//     searchToggle.addEventListener('click', function(e) {
+//         e.preventDefault();
+//         searchBox.classList.toggle('active');
+//         if (searchBox.classList.contains('active')) {
+//             searchInput.focus();
+//         }
+//     });
+//
+//     // Close search box when clicking outside
+//     document.addEventListener('click', function(e) {
+//         if (!searchBox.contains(e.target) && !searchToggle.contains(e.target)) {
+//             searchBox.classList.remove('active');
+//         }
+//     });
+//
+//     // Handle search form submission
+//     window.handleSearch = function(e) {
+//         e.preventDefault();
+//         const query = searchInput.value;
+//         console.log('Searching for:', query);
+//         // Add your search logic here
+//     };
+// });
 
 
 $(document).ready(function() {
@@ -233,31 +233,31 @@ document.addEventListener('DOMContentLoaded', function() {
     // Get the dropdown toggle button
     const dropdownToggle = document.getElementById('sortDropdown');
     const dropdownMenu = dropdownToggle.nextElementSibling;
-    
+
     // Add click event listener to toggle dropdown
     dropdownToggle.addEventListener('click', function(e) {
         e.preventDefault();
         dropdownMenu.classList.toggle('show');
     });
-    
+
     // Close the dropdown when clicking outside
     window.addEventListener('click', function(e) {
         if (!dropdownToggle.contains(e.target)) {
             dropdownMenu.classList.remove('show');
         }
     });
-    
+
     // Add click event listeners to dropdown items
     const dropdownItems = document.querySelectorAll('.dropdown-item');
     dropdownItems.forEach(item => {
         item.addEventListener('click', function(e) {
             e.preventDefault();
             // Here you can add logic for sorting
-            
+
             // Update the button text to show selected sort option
             const selectedText = this.textContent;
             dropdownToggle.innerHTML = 'Sort by: ' + selectedText + ' <i class="fas fa-sort-alpha-down ms-2"></i>';
-            
+
             // Hide dropdown after selection
             dropdownMenu.classList.remove('show');
         });
